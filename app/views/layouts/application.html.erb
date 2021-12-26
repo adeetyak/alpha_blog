@@ -9,12 +9,9 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
-  <% flash.each do |name,msg| %>
-    <br/>
-    <%= msg  %>
-  <% end %>
+  <body class="d-flex flex-column">
+  <%= render 'layouts/navigation' %>
+  <%= render 'layouts/messages' %>
   <%= yield %>
   </body>
 </html>
